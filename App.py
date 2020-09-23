@@ -1,10 +1,12 @@
 from flask import Flask
 from flask import render_template
 from flask_sqlalchemy import SQLAlchemy
+import os
+
 
 app = Flask(__name__)
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'MariaDBDialect://root:Barcelona1@localhost:3306/FACTURACIONDB'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Barcelona1@localhost:3306/FACTURACIONDB'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Barcelona1@localhost:3306/FACTURACIONDB'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DB_CON']
 db = SQLAlchemy(app)
 
 class cobro_actual(db.Model):
