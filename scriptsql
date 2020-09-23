@@ -1,0 +1,31 @@
+DROP table cobro_actual ;
+
+CREATE TABLE cobro_actual (
+  numero int NOT NULL,
+  nombre varchar(50) NOT NULL,
+  mes int NOT NULL,
+  monto decimal(10,2) NOT NULL,
+  impuesto decimal(10,2) NOT NULL,
+  mora decimal(10,2) NOT NULL,
+  total decimal(10,2) NOT NULL,
+  pagado int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+
+INSERT INTO cobro_actual (numero, nombre, mes, monto, impuesto, mora, total, pagado)
+  VALUES (13784536, "Alejandro Magno", 3,102.34,15.35,0,117.69,0);
+
+INSERT INTO cobro_actual (numero, nombre, mes, monto, impuesto, mora, total, pagado)
+  VALUES (10382678, "Julio Cesar", 3,354.33,53.15,0,407.48,0);
+ 
+INSERT INTO cobro_actual (numero, nombre, mes, monto, impuesto, mora, total, pagado)
+  VALUES (11926773, "Gengis Khan", 3,290.00,43.5,0,333.50,1); 
+
+INSERT INTO cobro_actual (numero, nombre, mes, monto, impuesto, mora, total, pagado)
+  VALUES (19937274, "Napoleon pierre", 3,1299.54,194.93,834.23,2328.7,1); 
+ 
+INSERT INTO cobro_actual (numero, nombre, mes, monto, impuesto, mora, total, pagado)
+  VALUES (96144482, "Carlos Jary", 9, 400.55, 100.00, 0, 2328.7, 0); 
+ 
+ SELECT * FROM cobro_actual
